@@ -12,7 +12,8 @@
     "min-cu": "json-minify src/currency.json >> dist/currency.min.json",
     "min-la": "json-minify src/language.json >> dist/language.min.json",
     "min-ph": "json-minify src/phone.json >> dist/phone.min.json",
-    "dist": "rm -rf dist/* && npm run min-ca && npm run min-ci && npm run min-co && npm run min-cn && npm run min-cu && npm run min-la && npm run min-ph"
+    "dist": "rm -rf dist/* && npm run min-ca && npm run min-ci && npm run min-co && npm run min-cn && npm run min-cu && npm run min-la && npm run min-ph",
+    "prepublishOnly": "npm run dist"
   },
   "repository": {
     "type": "git",
