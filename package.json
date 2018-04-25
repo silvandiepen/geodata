@@ -4,7 +4,15 @@
   "description": "all geodata in json",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"min-ca": "json-minify src/capital.json >> dist/capital.min.json",
+    "min-ci": "json-minify src/city.json >> dist/city.min.json",
+    "min-co": "json-minify src/continent.json >> dist/continent.min.json",
+    "min-cn": "json-minify src/country.json >> dist/country.min.json",
+    "min-cu": "json-minify src/currency.json >> dist/currency.min.json",
+    "min-la": "json-minify src/language.json >> dist/language.min.json",
+    "min-ph": "json-minify src/phone.json >> dist/phone.min.json",
+    "dist": "rm -rf dist/* && npm run min-ca && npm run min-ci && npm run min-co && npm run min-cn && npm run min-cu && npm run min-la && npm run min-ph"
   },
   "repository": {
     "type": "git",
@@ -22,5 +30,9 @@
   "bugs": {
     "url": "https://github.com/silvandiepen/geodata/issues"
   },
-  "homepage": "https://github.com/silvandiepen/geodata#readme"
+  "homepage": "https://github.com/silvandiepen/geodata#readme",
+  "dependencies": {
+    "json-minify": "^1.0.0",
+    "uglify-js": "^3.3.22"
+  }
 }
